@@ -1,0 +1,139 @@
+/* Importing/Linking to the Nunito Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box includes padding and border when setting a width or height */
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+}
+h1 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+a {
+    /* Removes the underline on a link */
+    text-decoration: none;
+    color: #4b5163;
+}
+#main {
+    position: relative;
+    /* VH (Viewport Height) determines the height of the element by setting it to a percentage of the viewport (NOTE: VW is used for -width- */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    /* OR  */
+    /* Same as setting center to justify-content and align-items (AKA shorthand)*/
+    place-items: center;
+    
+    padding: 0 20px;
+}
+
+#video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Media/cover.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;   
+    height: 100vh;
+    /* The object-fit property determines how a video or image (AKA img element) is resized to fit inside its container (AKA parent element). Setting the value to "cover" causes the video to retain its aspect ration and fill the given dimension */
+    object-fit: cover;
+
+}
+#cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+#content {
+    color: whitesmoke;
+    z-index: 2;
+    text-align: center;
+}
+
+#click {
+    /* Inline-block allows you to set top and bottom margin as well as width and height. This is not the case with inline */
+    display: inline-block;
+    margin-top: 25px;
+    border: 4px solid whitesmoke;
+    padding: 10px 30px;
+    background-color: steelblue;
+    /* A elements will NOT inherit text color like other text elements will. Mush be applied directly */
+    color: whitesmoke;
+    border-radius: 50px;
+    font-size: 40px;    
+    opacity: .8;
+}
+
+#click:hover {
+    /* Changes the size of an element */
+    transform: scale(0.95);
+}
+
+#about {
+    padding: 50px;  
+    text-align: center;
+}
+
+#about p {
+    font-size: 20px;    
+    max-width: 500px;   
+    margin: auto;
+}
+/* Descendant selector (for every h2 inside a parent element with the id of about, apply X styles */
+#about h2 {
+    margin: 20px 0;
+    color: steelblue;
+}
+
+i {
+    font-size: 48px;
+    margin: 0 5px;
+}
+/* EXTRA */
+#content h1 {
+    background-color: steelblue;
+    border: 4px solid whitesmoke;
+    border-radius: 50px;
+    padding: 10px 30px;
+    margin-top: 25px;
+}
+#content h2 {
+    background-color: peachpuff;
+    font-size: 60px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    opacity: 0.93;
+    color: steelblue;
+    border: 6px solid whitesmoke;
+    transform: scale(0.95);
+}
+#content h2 {
+    font-size: 80px;
+    color: whitesmoke;
+}
